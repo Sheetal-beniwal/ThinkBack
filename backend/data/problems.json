@@ -1,0 +1,162 @@
+[
+  {
+    "problem_id": 15,
+    "title": "3Sum",
+    "difficulty": "Medium",
+    "description": "Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.",
+    "tags": ["Array", "Two Pointers", "Sorting"],
+    "url": "https://leetcode.com/problems/3sum/"
+  },
+  {
+    "problem_id": 3,
+    "title": "Longest Substring Without Repeating Characters",
+    "difficulty": "Medium",
+    "description": "Given a string s, find the length of the longest substring without duplicate characters.",
+    "tags": ["Hash Table", "String", "Sliding Window"],
+    "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/"
+  },
+  {
+    "problem_id": 76,
+    "title": "Minimum Window Substring",
+    "difficulty": "Hard",
+    "description": "Given two strings s and t, return the minimum window substring of s such that every character in t, including duplicates, is included in the window.",
+    "tags": ["Hash Table", "String", "Sliding Window"],
+    "url": "https://leetcode.com/problems/minimum-window-substring/"
+  },
+  {
+    "problem_id": 567,
+    "title": "Permutation in String",
+    "difficulty": "Medium",
+    "description": "Given two strings s1 and s2, return true if s2 contains a permutation of s1, or false otherwise.",
+    "tags": ["Hash Table", "Two Pointers", "String", "Sliding Window"],
+    "url": "https://leetcode.com/problems/permutation-in-string/"
+  },
+  {
+    "problem_id": 11,
+    "title": "Container With Most Water",
+    "difficulty": "Medium",
+    "description": "Given an integer array height, find two lines that together with the x-axis form a container that contains the most water.",
+    "tags": ["Array", "Two Pointers", "Greedy"],
+    "url": "https://leetcode.com/problems/container-with-most-water/"
+  },
+  {
+    "problem_id": 167,
+    "title": "Two Sum II - Input Array Is Sorted",
+    "difficulty": "Medium",
+    "description": "Given a 1-indexed array of integers that is already sorted in non-decreasing order, find two numbers such that they add up to a specific target number.",
+    "tags": ["Array", "Two Pointers", "Binary Search"],
+    "url": "https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/"
+  },
+  {
+    "problem_id": 424,
+    "title": "Longest Repeating Character Replacement",
+    "difficulty": "Medium",
+    "description": "Given a string s and an integer k, return the length of the longest substring containing the same letter you can get after replacing at most k characters.",
+    "tags": ["Hash Table", "String", "Sliding Window"],
+    "url": "https://leetcode.com/problems/longest-repeating-character-replacement/"
+  },
+  {
+    "problem_id": 904,
+    "title": "Fruit Into Baskets",
+    "difficulty": "Medium",
+    "description": "You are visiting a farm with a row of fruit trees. You have two baskets and each basket can hold only one type of fruit. Find the maximum number of fruits you can collect.",
+    "tags": ["Array", "Hash Table", "Sliding Window"],
+    "url": "https://leetcode.com/problems/fruit-into-baskets/"
+  },
+  {
+    "problem_id": 121,
+    "title": "Best Time to Buy and Sell Stock",
+    "difficulty": "Easy",
+    "description": "Given an array prices where prices[i] is the price of a stock on the ith day, maximize your profit by choosing a single day to buy one stock and a different day to sell that stock.",
+    "tags": ["Array", "Dynamic Programming"],
+    "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/"
+  },
+  {
+    "problem_id": 219,
+    "title": "Contains Duplicate II",
+    "difficulty": "Easy",
+    "description": "Given an integer array nums and an integer k, return true if there are two distinct indices i and j such that nums[i] == nums[j] and abs(i - j) <= k.",
+    "tags": ["Array", "Hash Table", "Sliding Window"],
+    "url": "https://leetcode.com/problems/contains-duplicate-ii/"
+  },
+  {
+    "problem_id": 743,
+    "title": "Network Delay Time",
+    "difficulty": "Medium",
+    "description": "You are given a network of n nodes and directed edges with travel times. Find how long it takes for all nodes to receive a signal sent from a given node.",
+    "tags": ["Graph", "Shortest Path", "Heap"],
+    "url": "https://leetcode.com/problems/network-delay-time/"
+  },
+  {
+    "problem_id": 1631,
+    "title": "Path With Minimum Effort",
+    "difficulty": "Medium",
+    "description": "You are given a heights matrix where heights[row][col] represents the height of a cell. Find a path from the top-left to the bottom-right that minimizes the maximum absolute difference in heights between consecutive cells.",
+    "tags": ["Array", "Binary Search", "Graph", "Heap", "Matrix"],
+    "url": "https://leetcode.com/problems/path-with-minimum-effort/"
+  },
+  {
+    "problem_id": 787,
+    "title": "Cheapest Flights Within K Stops",
+    "difficulty": "Medium",
+    "description": "There are n cities connected by flights. Find the cheapest price from a source city to a destination city with at most k stops.",
+    "tags": ["Dynamic Programming", "Graph", "Shortest Path", "Heap"],
+    "url": "https://leetcode.com/problems/cheapest-flights-within-k-stops/"
+  },
+  {
+    "problem_id": 1091,
+    "title": "Shortest Path in Binary Matrix",
+    "difficulty": "Medium",
+    "description": "Given an n x n binary matrix, return the shortest clear path from the top-left cell to the bottom-right cell. A clear path consists only of cells containing 0.",
+    "tags": ["Array", "Breadth-First Search", "Matrix"],
+    "url": "https://leetcode.com/problems/shortest-path-in-binary-matrix/"
+  },
+  {
+    "problem_id": 200,
+    "title": "Number of Islands",
+    "difficulty": "Medium",
+    "description": "Given an m x n 2D binary grid, count the number of islands. An island is surrounded by water and is formed by connecting adjacent land cells horizontally or vertically.",
+    "tags": ["Array", "Depth-First Search", "Breadth-First Search", "Union Find", "Matrix"],
+    "url": "https://leetcode.com/problems/number-of-islands/"
+  },
+  {
+    "problem_id": 994,
+    "title": "Rotting Oranges",
+    "difficulty": "Medium",
+    "description": "Given a grid where each cell contains a fresh orange, rotten orange, or empty cell, return the minimum number of minutes until no fresh orange remains.",
+    "tags": ["Array", "Breadth-First Search", "Matrix"],
+    "url": "https://leetcode.com/problems/rotting-oranges/"
+  },
+  {
+    "problem_id": 785,
+    "title": "Is Graph Bipartite?",
+    "difficulty": "Medium",
+    "description": "Given an undirected graph, return true if and only if it is bipartite.",
+    "tags": ["Graph", "Breadth-First Search", "Depth-First Search"],
+    "url": "https://leetcode.com/problems/is-graph-bipartite/"
+  },
+  {
+    "problem_id": 70,
+    "title": "Climbing Stairs",
+    "difficulty": "Easy",
+    "description": "You are climbing a staircase. It takes n steps to reach the top. Each time you can climb either one or two steps. Return the number of distinct ways to reach the top.",
+    "tags": ["Dynamic Programming", "Memoization"],
+    "url": "https://leetcode.com/problems/climbing-stairs/"
+  },
+  {
+    "problem_id": 198,
+    "title": "House Robber",
+    "difficulty": "Medium",
+    "description": "Given an array of integers representing money in houses, determine the maximum amount of money you can rob without robbing two adjacent houses.",
+    "tags": ["Array", "Dynamic Programming"],
+    "url": "https://leetcode.com/problems/house-robber/"
+  },
+  {
+    "problem_id": 704,
+    "title": "Binary Search",
+    "difficulty": "Easy",
+    "description": "Given an array of integers nums sorted in ascending order and a target value, return the index of target if it exists in nums, otherwise return -1.",
+    "tags": ["Array", "Binary Search"],
+    "url": "https://leetcode.com/problems/binary-search/"
+  }
+]

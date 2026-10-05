@@ -1,0 +1,371 @@
+[
+  {
+    "problem_id": 15,
+    "title": "3Sum",
+    "difficulty": "Medium",
+    "description": "Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.",
+    "tags": [
+      "Array",
+      "Two Pointers",
+      "Sorting"
+    ],
+    "url": "https://leetcode.com/problems/3sum/",
+    "primary_pattern": "Two Pointers",
+    "secondary_patterns": [
+      "Sorting",
+      "Array"
+    ],
+    "reason": "The optimal solution sorts the array and then uses a two‑pointer scan for each fixed element to find complementary pairs that sum to zero."
+  },
+  {
+    "problem_id": 3,
+    "title": "Longest Substring Without Repeating Characters",
+    "difficulty": "Medium",
+    "description": "Given a string s, find the length of the longest substring without duplicate characters.",
+    "tags": [
+      "Hash Table",
+      "String",
+      "Sliding Window"
+    ],
+    "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+    "primary_pattern": "Sliding Window",
+    "secondary_patterns": [
+      "Hash Table",
+      "Two Pointers"
+    ],
+    "reason": "Uses a moving window with two pointers to maintain a substring and a hash set/map to detect duplicates efficiently."
+  },
+  {
+    "problem_id": 76,
+    "title": "Minimum Window Substring",
+    "difficulty": "Hard",
+    "description": "Given two strings s and t, return the minimum window substring of s such that every character in t, including duplicates, is included in the window.",
+    "tags": [
+      "Hash Table",
+      "String",
+      "Sliding Window"
+    ],
+    "url": "https://leetcode.com/problems/minimum-window-substring/",
+    "primary_pattern": "Sliding Window",
+    "secondary_patterns": [
+      "Hash Table",
+      "Two Pointers"
+    ],
+    "reason": "The solution expands and contracts a window over the string using two pointers while maintaining character counts in a hash map to satisfy the requirement."
+  },
+  {
+    "problem_id": 567,
+    "title": "Permutation in String",
+    "difficulty": "Medium",
+    "description": "Given two strings s1 and s2, return true if s2 contains a permutation of s1, or false otherwise.",
+    "tags": [
+      "Hash Table",
+      "Two Pointers",
+      "String",
+      "Sliding Window"
+    ],
+    "url": "https://leetcode.com/problems/permutation-in-string/",
+    "primary_pattern": "Sliding Window",
+    "secondary_patterns": [
+      "Hash Table",
+      "Two Pointers",
+      "String"
+    ],
+    "reason": "The solution maintains a fixed-size window over s2 and updates character frequency counts (hash table) while moving two pointers to check for a permutation of s1."
+  },
+  {
+    "problem_id": 11,
+    "title": "Container With Most Water",
+    "difficulty": "Medium",
+    "description": "Given an integer array height, find two lines that together with the x-axis form a container that contains the most water.",
+    "tags": [
+      "Array",
+      "Two Pointers",
+      "Greedy"
+    ],
+    "url": "https://leetcode.com/problems/container-with-most-water/",
+    "primary_pattern": "Two Pointers",
+    "secondary_patterns": [
+      "Greedy",
+      "Array"
+    ],
+    "reason": "The optimal solution uses two pointers at both ends of the array and moves the pointer with the smaller height inward, a greedy choice that maximizes area in linear time."
+  },
+  {
+    "problem_id": 167,
+    "title": "Two Sum II - Input Array Is Sorted",
+    "difficulty": "Medium",
+    "description": "Given a 1-indexed array of integers that is already sorted in non-decreasing order, find two numbers such that they add up to a specific target number.",
+    "tags": [
+      "Array",
+      "Two Pointers",
+      "Binary Search"
+    ],
+    "url": "https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/",
+    "primary_pattern": "Two Pointers",
+    "secondary_patterns": [
+      "Binary Search",
+      "Array"
+    ],
+    "reason": "The sorted nature of the input allows a linear two‑pointer scan to find the pair in O(n). An alternative is to fix one element and binary‑search for its complement, linking the binary search pattern as a secondary approach."
+  },
+  {
+    "problem_id": 424,
+    "title": "Longest Repeating Character Replacement",
+    "difficulty": "Medium",
+    "description": "Given a string s and an integer k, return the length of the longest substring containing the same letter you can get after replacing at most k characters.",
+    "tags": [
+      "Hash Table",
+      "String",
+      "Sliding Window"
+    ],
+    "url": "https://leetcode.com/problems/longest-repeating-character-replacement/",
+    "primary_pattern": "Sliding Window",
+    "secondary_patterns": [
+      "Hash Table",
+      "Two Pointers"
+    ],
+    "reason": "The solution maintains a dynamic window over the string, expanding and shrinking it while tracking character frequencies with a hash map to ensure at most k replacements."
+  },
+  {
+    "problem_id": 904,
+    "title": "Fruit Into Baskets",
+    "difficulty": "Medium",
+    "description": "You are visiting a farm with a row of fruit trees. You have two baskets and each basket can hold only one type of fruit. Find the maximum number of fruits you can collect.",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Sliding Window"
+    ],
+    "url": "https://leetcode.com/problems/fruit-into-baskets/",
+    "primary_pattern": "Sliding Window",
+    "secondary_patterns": [
+      "Hash Table (Frequency Map)",
+      "Two Pointers"
+    ],
+    "reason": "The problem asks for the longest contiguous subarray containing at most two distinct fruit types, which is solved by expanding and shrinking a window while tracking counts using a hash map."
+  },
+  {
+    "problem_id": 121,
+    "title": "Best Time to Buy and Sell Stock",
+    "difficulty": "Easy",
+    "description": "Given an array prices where prices[i] is the price of a stock on the ith day, maximize your profit by choosing a single day to buy one stock and a different day to sell that stock.",
+    "tags": [
+      "Array",
+      "Dynamic Programming"
+    ],
+    "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
+    "primary_pattern": "Greedy",
+    "secondary_patterns": [
+      "Single Pass",
+      "Prefix Minimum",
+      "Array Traversal"
+    ],
+    "reason": "Iterate once, keep the smallest price seen so far and compute profit with the current price, updating the maximum profit – a classic greedy/ prefix‑min approach."
+  },
+  {
+    "problem_id": 219,
+    "title": "Contains Duplicate II",
+    "difficulty": "Easy",
+    "description": "Given an integer array nums and an integer k, return true if there are two distinct indices i and j such that nums[i] == nums[j] and abs(i - j) <= k.",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Sliding Window"
+    ],
+    "url": "https://leetcode.com/problems/contains-duplicate-ii/",
+    "primary_pattern": "Sliding Window",
+    "secondary_patterns": [
+      "Hash Table",
+      "Array"
+    ],
+    "reason": "Maintain a window of the last k elements using a hash set to detect a duplicate within distance k in O(n) time."
+  },
+  {
+    "problem_id": 743,
+    "title": "Network Delay Time",
+    "difficulty": "Medium",
+    "description": "You are given a network of n nodes and directed edges with travel times. Find how long it takes for all nodes to receive a signal sent from a given node.",
+    "tags": [
+      "Graph",
+      "Shortest Path",
+      "Heap"
+    ],
+    "url": "https://leetcode.com/problems/network-delay-time/",
+    "primary_pattern": "Dijkstra's Algorithm (Single-Source Shortest Path)",
+    "secondary_patterns": [
+      "Heap (Priority Queue)",
+      "Greedy",
+      "Graph Traversal"
+    ],
+    "reason": "The problem requires finding the minimum travel time from a source node to all other nodes in a weighted directed graph, which is solved efficiently with Dijkstra's algorithm using a min‑heap."
+  },
+  {
+    "problem_id": 1631,
+    "title": "Path With Minimum Effort",
+    "difficulty": "Medium",
+    "description": "You are given a heights matrix where heights[row][col] represents the height of a cell. Find a path from the top-left to the bottom-right that minimizes the maximum absolute difference in heights between consecutive cells.",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Graph",
+      "Heap",
+      "Matrix"
+    ],
+    "url": "https://leetcode.com/problems/path-with-minimum-effort/",
+    "primary_pattern": "Binary Search on Answer",
+    "secondary_patterns": [
+      "Graph Traversal (BFS/DFS)",
+      "Dijkstra (Min‑Heap)"
+    ],
+    "reason": "The problem asks for minimizing the maximum edge weight along a path, which can be solved by binary searching the effort threshold and checking reachability via BFS/DFS, or directly by a Dijkstra‑style minimax path using a priority queue."
+  },
+  {
+    "problem_id": 787,
+    "title": "Cheapest Flights Within K Stops",
+    "difficulty": "Medium",
+    "description": "There are n cities connected by flights. Find the cheapest price from a source city to a destination city with at most k stops.",
+    "tags": [
+      "Dynamic Programming",
+      "Graph",
+      "Shortest Path",
+      "Heap"
+    ],
+    "url": "https://leetcode.com/problems/cheapest-flights-within-k-stops/",
+    "primary_pattern": "Bellman-Ford (DP on edges)",
+    "secondary_patterns": [
+      "Dijkstra with priority queue",
+      "Dynamic Programming on graph",
+      "BFS with pruning"
+    ],
+    "reason": "The problem asks for the minimum‑cost path with at most K edges, which is a classic constrained shortest‑path problem solved by DP over the number of stops (Bellman‑Ford) or by a state‑expanded Dijkstra using a heap."
+  },
+  {
+    "problem_id": 1091,
+    "title": "Shortest Path in Binary Matrix",
+    "difficulty": "Medium",
+    "description": "Given an n x n binary matrix, return the shortest clear path from the top-left cell to the bottom-right cell. A clear path consists only of cells containing 0.",
+    "tags": [
+      "Array",
+      "Breadth-First Search",
+      "Matrix"
+    ],
+    "url": "https://leetcode.com/problems/shortest-path-in-binary-matrix/",
+    "primary_pattern": "Breadth-First Search",
+    "secondary_patterns": [
+      "Shortest Path in Unweighted Graph",
+      "Grid Traversal",
+      "Matrix"
+    ],
+    "reason": "The problem asks for the minimum number of steps from start to end in a binary matrix, which is naturally modeled as an unweighted graph where each cell is a node and edges exist between 8-directionally adjacent clear cells. BFS guarantees the shortest path in such graphs."
+  },
+  {
+    "problem_id": 200,
+    "title": "Number of Islands",
+    "difficulty": "Medium",
+    "description": "Given an m x n 2D binary grid, count the number of islands. An island is surrounded by water and is formed by connecting adjacent land cells horizontally or vertically.",
+    "tags": [
+      "Array",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Union Find",
+      "Matrix"
+    ],
+    "url": "https://leetcode.com/problems/number-of-islands/",
+    "primary_pattern": "Depth-First Search",
+    "secondary_patterns": [
+      "Breadth-First Search",
+      "Union Find",
+      "Matrix"
+    ],
+    "reason": "The problem reduces to finding connected components in a 2D grid, which is typically solved by graph traversal (DFS/BFS) or Union‑Find; the grid representation adds the matrix pattern."
+  },
+  {
+    "problem_id": 994,
+    "title": "Rotting Oranges",
+    "difficulty": "Medium",
+    "description": "Given a grid where each cell contains a fresh orange, rotten orange, or empty cell, return the minimum number of minutes until no fresh orange remains.",
+    "tags": [
+      "Array",
+      "Breadth-First Search",
+      "Matrix"
+    ],
+    "url": "https://leetcode.com/problems/rotting-oranges/",
+    "primary_pattern": "Breadth-First Search (multi-source)",
+    "secondary_patterns": [
+      "Matrix traversal",
+      "Level-order traversal (time simulation)",
+      "Shortest path in unweighted graph"
+    ],
+    "reason": "The problem spreads rot from all initially rotten oranges simultaneously, which is modeled as a multi-source BFS on a 2D grid, processing cells level by level to compute the minimum minutes."
+  },
+  {
+    "problem_id": 785,
+    "title": "Is Graph Bipartite?",
+    "difficulty": "Medium",
+    "description": "Given an undirected graph, return true if and only if it is bipartite.",
+    "tags": [
+      "Graph",
+      "Breadth-First Search",
+      "Depth-First Search"
+    ],
+    "url": "https://leetcode.com/problems/is-graph-bipartite/",
+    "primary_pattern": "Graph Traversal (BFS/DFS) with Coloring",
+    "secondary_patterns": [
+      "Union-Find (Disjoint Set)",
+      "Connected Components"
+    ],
+    "reason": "The task is to explore each component of an undirected graph and assign one of two colors to vertices, ensuring no edge connects same‑colored vertices. BFS or DFS with a two‑color scheme is the core technique, while Union‑Find or component analysis can serve as alternative approaches."
+  },
+  {
+    "problem_id": 70,
+    "title": "Climbing Stairs",
+    "difficulty": "Easy",
+    "description": "You are climbing a staircase. It takes n steps to reach the top. Each time you can climb either one or two steps. Return the number of distinct ways to reach the top.",
+    "tags": [
+      "Dynamic Programming",
+      "Memoization"
+    ],
+    "url": "https://leetcode.com/problems/climbing-stairs/",
+    "primary_pattern": "Dynamic Programming",
+    "secondary_patterns": [
+      "Recursion",
+      "Memoization",
+      "Fibonacci Sequence"
+    ],
+    "reason": "The problem reduces to counting ways to reach step n, which follows the Fibonacci recurrence f(n)=f(n-1)+f(n-2). It can be solved via DP (bottom‑up or top‑down with memoization) or simple recursion."
+  },
+  {
+    "problem_id": 198,
+    "title": "House Robber",
+    "difficulty": "Medium",
+    "description": "Given an array of integers representing money in houses, determine the maximum amount of money you can rob without robbing two adjacent houses.",
+    "tags": [
+      "Array",
+      "Dynamic Programming"
+    ],
+    "url": "https://leetcode.com/problems/house-robber/",
+    "primary_pattern": "Dynamic Programming (1D DP)",
+    "secondary_patterns": [
+      "State Compression",
+      "Linear DP"
+    ],
+    "reason": "The solution builds a DP array where each state depends only on the previous two states, allowing O(n) time and O(1) extra space by compressing the state."
+  },
+  {
+    "problem_id": 704,
+    "title": "Binary Search",
+    "difficulty": "Easy",
+    "description": "Given an array of integers nums sorted in ascending order and a target value, return the index of target if it exists in nums, otherwise return -1.",
+    "tags": [
+      "Array",
+      "Binary Search"
+    ],
+    "url": "https://leetcode.com/problems/binary-search/",
+    "primary_pattern": "Binary Search",
+    "secondary_patterns": [
+      "Divide and Conquer"
+    ],
+    "reason": "The solution repeatedly halves the search interval on a sorted array, which is the classic binary search technique, a divide‑and‑conquer approach."
+  }
+]

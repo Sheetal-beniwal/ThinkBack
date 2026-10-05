@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+/* ─── Design tokens — warm pink / cream theme ───────────────────────────── */
+:root {
+  --font-sans: var(--font-nunito), system-ui, -apple-system, sans-serif;
+
+  /* Core palette */
+  --color-bg: #FFF5F7;
+  --color-surface: #FFFFFF;
+  --color-surface-hover: #FFF0F4;
+  --color-border: #FCE7F0;
+  --color-border-strong: #F9A8D4;
+
+  /* Pink brand */
+  --color-pink-50: #FFF0F5;
+  --color-pink-100: #FCE7F0;
+  --color-pink-200: #FBCFE8;
+  --color-pink-500: #EC4899;
+  --color-pink-600: #DB2777;
+
+  /* Text */
+  --color-text-primary: #1E1B4B;
+  --color-text-secondary: #64748B;
+  --color-text-muted: #94A3B8;
+}
+
+@theme inline {
+  --font-sans: var(--font-nunito), system-ui, sans-serif;
+  --color-background: var(--color-bg);
+  --color-foreground: var(--color-text-primary);
+}
+
+/* ─── Base resets ────────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+}
+
+/* ─── Scrollbar styling ──────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: #FBCFE8;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover { background: #F9A8D4; }
+
+/* ─── Select dark option background (stays dark on Windows) ─────────────── */
+select option {
+  background-color: #fff;
+  color: #1E1B4B;
+}
+
+/* ─── Focus ring ─────────────────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid rgba(236, 72, 153, 0.5);
+  outline-offset: 2px;
+}
