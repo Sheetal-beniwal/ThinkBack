@@ -134,7 +134,26 @@ export default function Home() {
       <SidebarLeft activeNav={activeNav} onNavClick={setActiveNav} />
 
       {/* Center Main Workspace */}
-      <main className="flex-1 py-6 px-4 sm:px-6 md:px-8 max-w-4xl mx-auto flex flex-col gap-6">
+      <main className="flex-1 py-6 px-4 sm:px-6 md:px-8 max-w-4xl mx-auto flex flex-col gap-5">
+        {/* ThinkBack V1 Notice Banner */}
+        <div className="flex items-center gap-3.5 rounded-2xl border border-[#F0E4F7] bg-white/90 p-3.5 sm:p-4 shadow-[0_2px_12px_rgba(224,41,154,0.05)] backdrop-blur-sm transition-all hover:border-[#E8C8F5]">
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-[#EC4899] to-[#9333EA] text-white font-black text-xs shadow-xs">
+            V1
+          </div>
+          <div className="flex flex-col gap-0.5 min-w-0 flex-1">
+            <div className="flex items-center gap-2">
+              <span className="text-xs font-black text-[#1A0828]">ThinkBack V1</span>
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-pink-200/80 bg-[#FFF0F6] px-2.5 py-0.5 text-[10px] font-extrabold text-[#E0299A]">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#E0299A] animate-pulse" />
+                Curated Library
+              </span>
+            </div>
+            <p className="text-[11.5px] font-semibold text-[#7A6296] leading-snug">
+              Currently featuring a curated set of 20 problems. More problems are being added in upcoming versions.
+            </p>
+          </div>
+        </div>
+
         {/* Top Hero Banner */}
         <HeroBanner onSearch={(q) => { setQuery(q); void handleSearch(q); }} loading={loading} />
 
