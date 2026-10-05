@@ -11,10 +11,10 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
-  title: "LeetCode Pattern Finder",
+  title: "ThinkBack",
   description:
     "AI-powered semantic search and revision assistant for your solved LeetCode problems. Find patterns, analyze your strengths, and prepare smarter.",
-  keywords: ["LeetCode", "DSA", "pattern finder", "AI", "revision", "algorithms"],
+  keywords: ["ThinkBack", "LeetCode", "DSA", "pattern finder", "AI", "revision", "algorithms"],
 };
 
 export default function RootLayout({
@@ -33,7 +33,7 @@ export default function RootLayout({
         <main className="relative">{children}</main>
 
         <footer className="mt-20 border-t border-pink-100 py-6 text-center text-xs text-slate-400 font-medium">
-          LeetCode Pattern Finder · AI-powered DSA revision
+          ThinkBack · AI-powered DSA revision
         </footer>
       </body>
     </html>

@@ -12,7 +12,7 @@ export default function Header() {
           </div>
           <div className="flex flex-col leading-tight">
             <span className="text-sm font-bold tracking-tight text-[#1E1B4B]">
-              LeetCode Pattern Finder
+              ThinkBack
             </span>
             <span className="text-[10px] font-medium text-pink-400 leading-none">
               AI-powered revision
