@@ -1,7 +1,8 @@
-from sentence_transformers import SentenceTransformer
+from fastembed import TextEmbedding
 
-
-model = SentenceTransformer("all-MiniLM-L6-v2")
+model = TextEmbedding(
+    model_name="BAAI/bge-small-en-v1.5"
+)
 
 
 def create_problem_text(problem):
@@ -23,9 +24,8 @@ Secondary Patterns:
 
 
 def create_embedding(problem):
-
     text = create_problem_text(problem)
 
-    embedding = model.encode(text)
+    embedding = list(model.embed([text]))[0]
 
     return embedding.tolist()

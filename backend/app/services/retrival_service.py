@@ -52,7 +52,7 @@ def search_problems(
     pattern: str | None = None
 ):
 
-    query_embedding = model.encode(query).tolist()
+    query_embedding = list(model.embed([query]))[0].tolist()
 
     conditions = []
 
