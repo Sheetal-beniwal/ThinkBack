@@ -12,8 +12,11 @@ export interface Problem {
   score: number;
   title: string;
   difficulty: "Easy" | "Medium" | "Hard";
+  description?: string;
   primary_pattern: string;
   url: string;
+  acceptanceRate?: string;
+  submissionCount?: string;
 }
 
 export interface SearchResponse {

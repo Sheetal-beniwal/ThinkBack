@@ -46,12 +46,13 @@ def search(request: SearchRequest):
 
         problems.append({
             "score": result.score,
-            "title": result.payload["title"],
-            "difficulty": result.payload["difficulty"],
-            "primary_pattern": result.payload["primary_pattern"],
-            "url": result.payload["url"]
+            "title": result.payload.get("title", ""),
+            "difficulty": result.payload.get("difficulty", "Easy"),
+            "description": result.payload.get("description", ""),
+            "primary_pattern": result.payload.get("primary_pattern", ""),
+            "url": result.payload.get("url", "#")
         })
 
     return {
         "results": problems
-    }
+    }

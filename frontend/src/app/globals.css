@@ -3,31 +3,44 @@
 /* ─── Design tokens — warm pink / cream theme ───────────────────────────── */
 :root {
   --font-sans: var(--font-nunito), system-ui, -apple-system, sans-serif;
+  --font-handwriting: var(--font-caveat), cursive;
+  --font-heading: var(--font-baloo2), system-ui, sans-serif;
 
-  /* Core palette */
-  --color-bg: #FFF5F7;
+  /* Core palette from exact photo sampling */
+  --color-bg: #FAF8FC;
   --color-surface: #FFFFFF;
-  --color-surface-hover: #FFF0F4;
-  --color-border: #FCE7F0;
-  --color-border-strong: #F9A8D4;
+  --color-surface-hover: #FAF5FF;
+  --color-border: #F3E8EE;
+  --color-border-strong: #F472B6;
 
-  /* Pink brand */
-  --color-pink-50: #FFF0F5;
-  --color-pink-100: #FCE7F0;
+  /* Pink / Purple brand */
+  --color-pink-50: #FDF2F8;
+  --color-pink-100: #FCE7F3;
   --color-pink-200: #FBCFE8;
   --color-pink-500: #EC4899;
   --color-pink-600: #DB2777;
+  --color-purple-600: #9333EA;
 
   /* Text */
-  --color-text-primary: #1E1B4B;
+  --color-text-primary: #1E1035;
   --color-text-secondary: #64748B;
   --color-text-muted: #94A3B8;
 }
 
 @theme inline {
   --font-sans: var(--font-nunito), system-ui, sans-serif;
+  --font-handwriting: var(--font-caveat), cursive;
+  --font-heading: var(--font-baloo2), system-ui, sans-serif;
   --color-background: var(--color-bg);
   --color-foreground: var(--color-text-primary);
+}
+
+.font-handwriting {
+  font-family: var(--font-caveat), cursive;
+}
+
+.font-heading {
+  font-family: var(--font-baloo2), system-ui, sans-serif;
 }
 
 /* ─── Base resets ────────────────────────────────────────────────────────── */
