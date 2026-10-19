@@ -15,7 +15,7 @@
       "Sorting",
       "Array"
     ],
-    "reason": "The optimal solution sorts the array and then uses a two‑pointer scan for each fixed element to find complementary pairs that sum to zero."
+    "reason": "The solution sorts the array and then fixes one element while using a two‑pointer scan to find the remaining two elements that sum to the target, a classic two‑pointer pattern on a sorted array."
   },
   {
     "problem_id": 3,
@@ -33,7 +33,7 @@
       "Hash Table",
       "Two Pointers"
     ],
-    "reason": "Uses a moving window with two pointers to maintain a substring and a hash set/map to detect duplicates efficiently."
+    "reason": "The solution maintains a moving window over the string, expanding it while characters are unique and shrinking it when a duplicate appears, using a hash table (or set) to track characters in O(1) time."
   },
   {
     "problem_id": 76,
@@ -48,10 +48,10 @@
     "url": "https://leetcode.com/problems/minimum-window-substring/",
     "primary_pattern": "Sliding Window",
     "secondary_patterns": [
-      "Hash Table",
+      "Hash Table (Frequency Counter)",
       "Two Pointers"
     ],
-    "reason": "The solution expands and contracts a window over the string using two pointers while maintaining character counts in a hash map to satisfy the requirement."
+    "reason": "The solution expands and contracts a window over the string using two pointers while maintaining character counts in a hash map to satisfy the requirement of containing all characters of t."
   },
   {
     "problem_id": 567,
@@ -71,7 +71,7 @@
       "Two Pointers",
       "String"
     ],
-    "reason": "The solution maintains a fixed-size window over s2 and updates character frequency counts (hash table) while moving two pointers to check for a permutation of s1."
+    "reason": "The solution maintains a fixed-size window over s2 and updates character frequency counts using a hash map, moving the window with two pointers to check for a permutation of s1."
   },
   {
     "problem_id": 11,
@@ -86,10 +86,9 @@
     "url": "https://leetcode.com/problems/container-with-most-water/",
     "primary_pattern": "Two Pointers",
     "secondary_patterns": [
-      "Greedy",
-      "Array"
+      "Greedy"
     ],
-    "reason": "The optimal solution uses two pointers at both ends of the array and moves the pointer with the smaller height inward, a greedy choice that maximizes area in linear time."
+    "reason": "The optimal O(n) solution uses a left and right pointer that move toward each other, always discarding the shorter line (a greedy choice) to potentially find a larger area."
   },
   {
     "problem_id": 167,
@@ -107,7 +106,7 @@
       "Binary Search",
       "Array"
     ],
-    "reason": "The sorted nature of the input allows a linear two‑pointer scan to find the pair in O(n). An alternative is to fix one element and binary‑search for its complement, linking the binary search pattern as a secondary approach."
+    "reason": "The sorted array allows a linear scan with a low and high pointer moving towards each other to find the target sum (primary). An alternative is to fix one element and binary‑search for its complement (secondary). The data structure involved is a simple array."
   },
   {
     "problem_id": 424,
@@ -140,10 +139,10 @@
     "url": "https://leetcode.com/problems/fruit-into-baskets/",
     "primary_pattern": "Sliding Window",
     "secondary_patterns": [
-      "Hash Table (Frequency Map)",
-      "Two Pointers"
+      "Two Pointers",
+      "Hash Map / Frequency Counter"
     ],
-    "reason": "The problem asks for the longest contiguous subarray containing at most two distinct fruit types, which is solved by expanding and shrinking a window while tracking counts using a hash map."
+    "reason": "The problem asks for the longest contiguous subarray containing at most two distinct fruit types, which is solved by expanding and shrinking a window with two pointers while tracking counts using a hash map."
   },
   {
     "problem_id": 121,
@@ -157,11 +156,10 @@
     "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
     "primary_pattern": "Greedy",
     "secondary_patterns": [
-      "Single Pass",
-      "Prefix Minimum",
-      "Array Traversal"
+      "One-pass array traversal",
+      "Prefix minimum (tracking minimum so far)"
     ],
-    "reason": "Iterate once, keep the smallest price seen so far and compute profit with the current price, updating the maximum profit – a classic greedy/ prefix‑min approach."
+    "reason": "The optimal solution scans the array once, maintaining the lowest price seen and the maximum profit achievable, which is a classic greedy approach."
   },
   {
     "problem_id": 219,
@@ -179,7 +177,7 @@
       "Hash Table",
       "Array"
     ],
-    "reason": "Maintain a window of the last k elements using a hash set to detect a duplicate within distance k in O(n) time."
+    "reason": "Maintain a window of the last k elements using a hash set to detect if any value repeats within the distance constraint."
   },
   {
     "problem_id": 743,
@@ -216,9 +214,9 @@
     "primary_pattern": "Binary Search on Answer",
     "secondary_patterns": [
       "Graph Traversal (BFS/DFS)",
-      "Dijkstra (Min‑Heap)"
+      "Dijkstra (Min‑Heap) / Minimax Path"
     ],
-    "reason": "The problem asks for minimizing the maximum edge weight along a path, which can be solved by binary searching the effort threshold and checking reachability via BFS/DFS, or directly by a Dijkstra‑style minimax path using a priority queue."
+    "reason": "We need the smallest possible maximum height difference along a path. The common approach binary‑searches the effort value and uses BFS/DFS to test feasibility, while an alternative is Dijkstra/union‑find to directly compute the minimax path."
   },
   {
     "problem_id": 787,
@@ -232,13 +230,13 @@
       "Heap"
     ],
     "url": "https://leetcode.com/problems/cheapest-flights-within-k-stops/",
-    "primary_pattern": "Bellman-Ford (DP on edges)",
+    "primary_pattern": "Shortest Path (Bellman-Ford / DP with limited edges)",
     "secondary_patterns": [
-      "Dijkstra with priority queue",
-      "Dynamic Programming on graph",
-      "BFS with pruning"
+      "Dynamic Programming",
+      "Graph Traversal (BFS)",
+      "Heap (Priority Queue)"
     ],
-    "reason": "The problem asks for the minimum‑cost path with at most K edges, which is a classic constrained shortest‑path problem solved by DP over the number of stops (Bellman‑Ford) or by a state‑expanded Dijkstra using a heap."
+    "reason": "The problem asks for the minimum cost path with at most K stops, which is solved by relaxing edges up to K+1 times (Bellman‑Ford style DP) or by using a priority queue with state (city, stops) – both are shortest‑path techniques combined with DP and heap usage."
   },
   {
     "problem_id": 1091,
@@ -272,13 +270,13 @@
       "Matrix"
     ],
     "url": "https://leetcode.com/problems/number-of-islands/",
-    "primary_pattern": "Depth-First Search",
+    "primary_pattern": "Depth-First Search (Flood Fill)",
     "secondary_patterns": [
       "Breadth-First Search",
       "Union Find",
-      "Matrix"
+      "Matrix Traversal"
     ],
-    "reason": "The problem reduces to finding connected components in a 2D grid, which is typically solved by graph traversal (DFS/BFS) or Union‑Find; the grid representation adds the matrix pattern."
+    "reason": "The problem reduces to finding connected components in a 2D grid, which is typically solved by DFS/BFS flood‑fill or by Union‑Find to merge adjacent land cells."
   },
   {
     "problem_id": 994,
@@ -291,13 +289,13 @@
       "Matrix"
     ],
     "url": "https://leetcode.com/problems/rotting-oranges/",
-    "primary_pattern": "Breadth-First Search (multi-source)",
+    "primary_pattern": "Breadth-First Search",
     "secondary_patterns": [
-      "Matrix traversal",
-      "Level-order traversal (time simulation)",
-      "Shortest path in unweighted graph"
+      "Multi-source BFS",
+      "Matrix",
+      "Level Order Traversal"
     ],
-    "reason": "The problem spreads rot from all initially rotten oranges simultaneously, which is modeled as a multi-source BFS on a 2D grid, processing cells level by level to compute the minimum minutes."
+    "reason": "The problem spreads rot from all initially rotten oranges simultaneously, which is modeled as a multi‑source BFS on a 2‑D grid, processing cells level by level (minute by minute) until no fresh oranges remain."
   },
   {
     "problem_id": 785,
@@ -312,10 +310,10 @@
     "url": "https://leetcode.com/problems/is-graph-bipartite/",
     "primary_pattern": "Graph Traversal (BFS/DFS) with Coloring",
     "secondary_patterns": [
-      "Union-Find (Disjoint Set)",
+      "Union-Find (Disjoint Set Union)",
       "Connected Components"
     ],
-    "reason": "The task is to explore each component of an undirected graph and assign one of two colors to vertices, ensuring no edge connects same‑colored vertices. BFS or DFS with a two‑color scheme is the core technique, while Union‑Find or component analysis can serve as alternative approaches."
+    "reason": "The core solution colors nodes while traversing the graph via BFS or DFS to ensure no adjacent nodes share the same color, which is a classic two‑coloring problem. Union‑Find can also be used to detect odd cycles, and handling each component separately is required for disconnected graphs."
   },
   {
     "problem_id": 70,
@@ -329,11 +327,11 @@
     "url": "https://leetcode.com/problems/climbing-stairs/",
     "primary_pattern": "Dynamic Programming",
     "secondary_patterns": [
-      "Recursion",
       "Memoization",
+      "Tabulation",
       "Fibonacci Sequence"
     ],
-    "reason": "The problem reduces to counting ways to reach step n, which follows the Fibonacci recurrence f(n)=f(n-1)+f(n-2). It can be solved via DP (bottom‑up or top‑down with memoization) or simple recursion."
+    "reason": "The problem reduces to counting ways using the recurrence f(n)=f(n-1)+f(n-2), which is solved via DP (either top‑down memoization or bottom‑up tabulation) and is essentially the Fibonacci sequence."
   },
   {
     "problem_id": 198,
@@ -345,12 +343,12 @@
       "Dynamic Programming"
     ],
     "url": "https://leetcode.com/problems/house-robber/",
-    "primary_pattern": "Dynamic Programming (1D DP)",
+    "primary_pattern": "Dynamic Programming",
     "secondary_patterns": [
-      "State Compression",
-      "Linear DP"
+      "Linear DP",
+      "Space Optimized DP"
     ],
-    "reason": "The solution builds a DP array where each state depends only on the previous two states, allowing O(n) time and O(1) extra space by compressing the state."
+    "reason": "The problem requires computing the optimal sub‑solution for each prefix of the array, where each state depends on the previous two states, which is a classic linear DP with O(1) space optimization."
   },
   {
     "problem_id": 704,
@@ -366,6 +364,6 @@
     "secondary_patterns": [
       "Divide and Conquer"
     ],
-    "reason": "The solution repeatedly halves the search interval on a sorted array, which is the classic binary search technique, a divide‑and‑conquer approach."
+    "reason": "The solution repeatedly halves the search interval on a sorted array, which is the classic binary search technique, a divide-and-conquer approach."
   }
 ]
